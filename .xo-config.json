@@ -1,0 +1,21 @@
+{
+    "prettier": true,
+    "semi": true,
+    "space": 4,
+    "envs": [
+        "node",
+        "es2021"
+    ],
+    "ignore": [
+        "src/locale/*"
+    ],
+    "rules": {
+        "import/extensions": "off",
+        "unicorn/prefer-module": "off",
+        "@typescript-eslint/await-thenable": "off",
+        "@typescript-eslint/consistent-type-definitions": [
+            "error",
+            "interface"
+        ]
+    }
+}

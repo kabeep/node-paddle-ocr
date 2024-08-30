@@ -1,0 +1,47 @@
+{
+    "name": "@kabeep/node-paddle-ocr",
+    "version": "0.1.0",
+    "description": "Offline, Multi-language and Faster OCR in terminal.",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "bin": {
+        "ocr": "./dist/index.js"
+    },
+    "scripts": {
+        "lint": "xo src/**/*.ts --fix",
+        "pretest": "npm run lint",
+        "watch": "tsup --watch --ignore-watch lib",
+        "build": "npm run clean && tsup --dts --treeshake smallest",
+        "clean": "rimraf dist",
+        "locale": "localize src/locale/zh-CN.ts -t en-US",
+        "prepare": "husky"
+    },
+    "devDependencies": {
+        "@kabeep/node-translate-i18n": "^1.1.0",
+        "@types/node": "^22.5.0",
+        "@types/yargs": "^17.0.33",
+        "husky": "^9.1.5",
+        "rimraf": "^5.0.10",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.2.4",
+        "typescript": "^5.5.4",
+        "xo": "^0.58.0"
+    },
+    "dependencies": {
+        "ora": "^5.4.1",
+        "os-locale": "^5.0.0",
+        "paddleocrjson": "^1.1.1-a",
+        "yargs": "^17.7.2"
+    },
+    "author": "Zhang Zixin (kabeep)",
+    "homepage": "https://github.com/kabeep/node-paddle-ocr#readme",
+    "repository": "git@github.com:kabeep/node-paddle-ocr.git",
+    "bugs": "https://github.com/kabeep/node-paddle-ocr/issue",
+    "engines": {
+        "node": ">=16"
+    },
+    "license": "MIT"
+}
